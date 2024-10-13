@@ -1,5 +1,5 @@
 {
-    "name": "fenrir/authentication",
+    "name": "fenrir-soft/authentication",
     "version": "1.0.0",
     "type": "library",
     "license": "MIT",
@@ -21,13 +21,7 @@
         }
     },
     "require": {
-        "fenrir/framework": "^1.0",
+        "fenrir-soft/framework": "^1.0",
         "firebase/php-jwt": "^6.10"
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/Fenrir-Soft/framework"
-        }
-    ]
+    }
 }
