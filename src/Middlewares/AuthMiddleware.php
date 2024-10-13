@@ -65,6 +65,12 @@ class AuthMiddleware implements Middleware
 
             $next();
         } catch (Throwable $th) {
+            if ($auth->getRedirectUrl() !== '') {
+                $this->response->setStatusCode(307);
+                $this->response->headers->set('Location', $auth->getRedirectUrl());
+                return;
+            }
+
             $code = 401;
             if ($th->getCode() === 403) {
                 $code = 403;
