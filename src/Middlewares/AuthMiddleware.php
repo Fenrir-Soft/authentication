@@ -63,6 +63,8 @@ class AuthMiddleware implements Middleware
                 }
             }
 
+            $this->request->attributes->set('authenticated_user', $decoded);
+
             $next();
         } catch (Throwable $th) {
             if ($auth->getRedirectUrl() !== '') {
