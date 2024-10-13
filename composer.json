@@ -1,0 +1,32 @@
+{
+    "name": "fenrir/authentication",
+    "version": "1.0.0",
+    "type": "library",
+    "authors": [
+        {
+            "email": "contato@fenrirsoft.com.br",
+            "name": "Fábio Dias",
+            "homepage": "https://fenrirsoft.com.br"
+        }
+    ],
+    "config": {
+        "platform": {
+            "php": "8.2"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Fenrir\\Authentication\\": "src/"
+        }
+    },
+    "require": {
+        "fenrir/framework": "^1.0",
+        "firebase/php-jwt": "^6.10"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Fenrir-Soft/framework"
+        }
+    ]
+}
